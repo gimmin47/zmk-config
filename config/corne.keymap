@@ -9,42 +9,122 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+        behaviors {
+                lh_ctrl: left_hand_control {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "POSITIONAL_HOLD_TAP_LEFT_CONTROL";
+                        #binding-cells = <2>;
+                        flavor = "balanced";
+                        tapping-term-ms = <250>;
+                        quick-tap-ms = <300>;
+                        bindings = <&kp>, <&kp>;
+                        hold-trigger-key-positions = <1 2 3 14 15 19 25 26>;
+                };
+                rh_ctrl: right_hand_control {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "POSITIONAL_HOLD_TAP_RIGHT_CONTROL";
+                        #binding-cells = <2>;
+                        flavor = "balanced";
+                        tapping-term-ms = <250>;
+                        quick-tap-ms = <300>;
+                        bindings = <&kp>, <&kp>;
+                        hold-trigger-key-positions = <4 16 25 26 27 29>;
+                };
+                lh_alt: left_hand_alt {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "POSITIONAL_HOLD_TAP_LEFT_ALT";
+                        #binding-cells = <2>;
+                        flavor = "balanced";
+                        tapping-term-ms = <250>;
+                        quick-tap-ms = <300>;
+                        bindings = <&kp>, <&kp>;
+                        hold-trigger-key-positions = <12 28>;
+                };
+                rh_alt: right_hand_alt {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "POSITIONAL_HOLD_TAP_RIGHT_ALT";
+                        #binding-cells = <2>;
+                        flavor = "balanced";
+                        tapping-term-ms = <250>;
+                        quick-tap-ms = <300>;
+                        bindings = <&kp>, <&kp>;
+                        hold-trigger-key-positions = <12 28>;
+                };
+                lh_shft: left_hand_shift {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "POSITIONAL_HOLD_TAP_LEFT_SHIFT";
+                        #binding-cells = <2>;
+                        flavor = "balanced";
+                        tapping-term-ms = <250>;
+                        quick-tap-ms = <300>;
+                        bindings = <&kp>, <&kp>;
+                };
+                rh_shft: right_hand_shift {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "POSITIONAL_HOLD_TAP_RIGHT_SHIFT";
+                        #binding-cells = <2>;
+                        flavor = "balanced";
+                        tapping-term-ms = <250>;
+                        quick-tap-ms = <300>;
+                        bindings = <&kp>, <&kp>;
+                };
+                lh_gui: left_hand_gui {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "POSITIONAL_HOLD_TAP_LEFT_GUI";
+                        #binding-cells = <2>;
+                        flavor = "balanced";
+                        tapping-term-ms = <250>;
+                        quick-tap-ms = <300>;
+                        bindings = <&kp>, <&kp>;
+                        hold-trigger-key-positions = <7 12>;
+                };
+                rh_gui: right_hand_gui {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "POSITIONAL_HOLD_TAP_RIGHT_GUI";
+                        #binding-cells = <2>;
+                        flavor = "balanced";
+                        tapping-term-ms = <250>;
+                        quick-tap-ms = <300>;
+                        bindings = <&kp>, <&kp>;
+                        hold-trigger-key-positions = <7 12 14>;
+                };
+        };
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  |  -   |
-// | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  '   |
-// | NUMP |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  |  \   |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// | ESC   |  Q          |  W            |  F             |  P             |  B     |  //  |  J    |  L            |  U              |  Y           |  ;           |  -   |
+// | TAB   |  A-gui      |  R-alt        |  S-shift       |  T-ctrl        |  G     |  //  |  M    |  N-ctrl       |  E-shift        |  I-alt       |  O-gui       |  '   |
+// | NUMP  |  Z          |  X            |  C             |  D             |  V     |  //  |  K    |  H            |  ,              |  .           |  /           |  \   |
+//                                       | GUI            | LWR            | SPC    |  //  | ENT   | RSE           | ALT             |
                         bindings = <
-   &kp ESC &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L   &kp U     &kp Y    &kp SEMI &kp MINUS
-   &kp TAB &kp A &kp R &kp S &kp T &kp G   &kp M &kp N   &kp E     &kp I    &kp O    &kp SQT
-   &mo 3   &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H   &kp COMMA &kp DOT  &kp FSLH &kp BSLH
-                  &mo 1 &kp BSPC &kp SPACE   &kp RET &mo 2 &kp RALT
+   &kp ESC &kp Q          &kp W          &kp F            &kp P            &kp B           &kp J   &kp L            &kp U            &kp Y          &kp SEMI       &kp MINUS
+   &kp TAB &lh_gui LGUI A &lh_alt LALT R &lh_shft LSHFT S &lh_ctrl LCTRL T &kp G           &kp M   &rh_ctrl RCTRL N &rh_shft RSHFT E &rh_alt RALT I &rh_gui RGUI O &kp SQT
+   &mo 3   &kp Z          &kp X          &kp C            &kp D            &kp V           &kp K   &kp H            &kp COMMA        &kp DOT        &kp FSLH       &kp BSLH
+                                         &mo 1            &kp BSPC         &kp SPACE       &kp RET &mo 2            &kp RALT
                         >;
                 };
                 lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// -------------------------------------------------------------------------------------------
+// |  TAB |  1  |  2  |  3  |  4  |  5  |               |  6  |  7  |  8  |  9  |  0  | BKSP |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |               | LFT | DWN |  UP | RGT |     |      |
+// | SHFT |     |     |     |     |     |               |     |     |     |     |     |      |
+//                    | GUI |     | SPC |               | ENT |     | ALT |
                         bindings = <
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
    &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                          	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+                          	            &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
                         >;
                 };
 
                 raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// -------------------------------------------------------------------------------------------
+// |  TAB |  !  |  @  |  #  |  $  |  %  |               |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// | CTRL |     |     |     |     |     |               |  -  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |               |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |               | ENT |     | ALT |
                         bindings = <
    &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
@@ -54,16 +134,16 @@
                 };
 
                 numpad_layer {
-// -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |     |  7  |  8  |  9  |  +  |  -   |
-// |      |     |     |     |     |     |   |     |  4  |  5  |  6  |     |  *   |
-// |      |     |     |     |     |     |   |     |  1  |  2  |  3  | RET |  /   |
-//                    |     |     |     |   | ENT |  0  |  .  |
+// -------------------------------------------------------------------------------------------
+// |      |     |     |     |     |     |               |     |  7  |  8  |  9  |  +  |  -   |
+// |      |     |     |     |     |     |               |     |  4  |  5  |  6  |     |  *   |
+// |      |     |     |     |     |     |               |     |  1  |  2  |  3  | RET |  /   |
+//                    |     |     |     |               | ENT |  0  |  .  |
                         bindings = <
    &trans  &trans   &trans &trans   &trans   &trans   &trans    &kp N7  &kp N8 &kp N9 &kp PLUS &kp MINUS
    &trans  &trans   &trans &trans   &trans   &trans   &trans    &kp N4  &kp N5 &kp N6 &trans   &kp KP_MULTIPLY
    &trans  &trans   &trans &trans   &trans   &trans   &kp DOT   &kp N1  &kp N2 &kp N3 &kp RET  &kp FSLH
-                    	     &trans &trans   &trans   &kp RET   &kp N0    &kp DOT
+                           &trans   &trans   &trans   &kp RET   &kp N0  &kp DOT
                         >;
                 };
         };
