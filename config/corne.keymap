@@ -97,7 +97,7 @@
 // | ESC   |  Q          |  W            |  F             |  P             |  B     |  //  |  J    |  L            |  U              |  Y           |  ;           |  -   |
 // | TAB   |  A-gui      |  R-alt        |  S-shift       |  T-ctrl        |  G     |  //  |  M    |  N-ctrl       |  E-shift        |  I-alt       |  O-gui       |  '   |
 // | NUMP  |  Z          |  X            |  C             |  D             |  V     |  //  |  K    |  H            |  ,              |  .           |  /           |  \   |
-//                                       | GUI            | LWR            | SPC    |  //  | ENT   | RSE           | ALT             |
+//                                       |  LOWER         |  BACKSPACE     |  SPC   |  //  |  ENT  |  RAISE        |  ALT            |
                         bindings = <
    &kp ESC &kp Q          &kp W          &kp F            &kp P            &kp B           &kp J   &kp L            &kp U            &kp Y          &kp SEMI       &kp MINUS
    &kp TAB &lh_gui LGUI A &lh_alt LALT R &lh_shft LSHFT S &lh_ctrl LCTRL T &kp G           &kp M   &rh_ctrl RCTRL N &rh_shft RSHFT E &rh_alt RALT I &rh_gui RGUI O &kp SQT
