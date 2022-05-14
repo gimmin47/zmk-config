@@ -180,7 +180,7 @@
    &trans  &trans &trans &trans &trans &trans        &trans &trans    &trans &trans &trans &trans
    &trans  &trans &trans &trans &trans &trans        &trans &trans    &trans &trans &trans &trans
    &trans  &trans &trans &trans &trans &trans        &trans &trans    &trans &trans &trans &trans
-                         &trans &trans &trans        &tran  &tog WASD &tog MOUSE
+                         &trans &trans &trans        &trans &tog WASD &tog MOUSE
                         >;
                 };
 
