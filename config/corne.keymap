@@ -15,6 +15,7 @@
 #define NUMPAD 4
 #define MOUSE 5
 #define WASD 6
+#define FIGHT 7
 
 / {
         behaviors {
@@ -26,7 +27,7 @@
                         tapping-term-ms = <250>;
                         quick-tap-ms = <300>;
                         bindings = <&kp>, <&kp>;
-                        hold-trigger-key-positions = <1 2 3 14 15 19 25 26>;
+                        hold-trigger-key-positions = <1 2 3 13 14 15 19 25 26>;
                 };
                 rh_ctrl: right_hand_control {
                         compatible = "zmk,behavior-hold-tap";
@@ -36,7 +37,7 @@
                         tapping-term-ms = <250>;
                         quick-tap-ms = <300>;
                         bindings = <&kp>, <&kp>;
-                        hold-trigger-key-positions = <4 16 25 26 27 29>;
+                        hold-trigger-key-positions = <4 13 16 25 26 27 29>;
                 };
                 lh_alt: left_hand_alt {
                         compatible = "zmk,behavior-hold-tap";
@@ -76,7 +77,7 @@
                         quick-tap-ms = <300>;
                         bindings = <&kp>, <&kp>;
                 };
-                lh_gui: left_hand_gui {
+                lh_num: left_hand_numpad {
                         compatible = "zmk,behavior-hold-tap";
                         label = "POSITIONAL_HOLD_TAP_LEFT_GUI";
                         #binding-cells = <2>;
@@ -84,7 +85,6 @@
                         tapping-term-ms = <250>;
                         quick-tap-ms = <300>;
                         bindings = <&kp>, <&kp>;
-                        hold-trigger-key-positions = <7 12>;
                 };
                 rh_gui: right_hand_gui {
                         compatible = "zmk,behavior-hold-tap";
@@ -96,6 +96,14 @@
                         bindings = <&kp>, <&kp>;
                         hold-trigger-key-positions = <7 12 14>;
                 };
+                spc_nav: space_navigation {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "POSITIONAL_HOLD_TAP_SPACE_NAV";
+                        #binding-cells = <2>;
+                        flavor = "balanced";
+                        tapping-term-ms = <250>;
+                        quick-tap-ms = <100>;
+                        bindings = <&kp>, <&kp>;
         };
         keymap {
                 compatible = "zmk,keymap";
@@ -103,14 +111,14 @@
                 default_layer {
 // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |      |  Q           |  W           |  F             |  P             |  B      |  //  |  J     |  L             |  U              |  Y           |  '"          |     |
-// |      |  A-NUM       |  R-alt       |  S-shift       |  T-ctrl        |  G      |  //  |  M     |  N-ctrl        |  E-shift        |  I-alt       |  O-gui       |     |
-// |      |  Z-gui       |  X           |  C             |  D             |  V      |  //  |  K     |  H             |  ,              |  .           |  /           |     |
+// |      |  A-NUM       |  R-alt       |  S-shift       |  T-ctrl        |  G      |  //  |  M     |  N-ctrl        |  E-shift        |  I-alt       |  O           |     |
+// |      |  Z-gui       |  X           |  C             |  D             |  V      |  //  |  K     |  H             |  ,              |  .           |  /-gui       |     |
 //                                      |  BACKSPACE     |  SPC (nav)     |TAB (mse)|  //  |        |  ENT (func)    |  DEL (special)  |
                         bindings = <
    &trans &kp Q          &kp W          &kp F            &kp P            &kp B            &kp J    &kp L            &kp U             &kp Y          &kp SQT        &trans
    &trans &lt NUMPAD A   &lh_alt LALT R &lh_shft LSHFT S &lh_ctrl LCTRL T &kp G            &kp M    &rh_ctrl RCTRL N &rh_shft RSHFT E  &rh_alt RALT I &kp O          &trans
    &trans &kp Z          &kp X          &kp C            &kp D            &kp V            &kp K    &kp H            &kp COMMA         &kp DOT        &rh_gui RGUI FSLH       &trans
-                                        &kp BKSP         &lt NAV SPACE    &lt MOUSE TAB    &trans   &lt SPECIAL RET  &lt FUNCTION DEL
+                                        &kp BKSP         &spc_nav r NAV SPACE    &lt MOUSE TAB    &trans   &lt SPECIAL RET  &lt FUNCTION DEL
                         >;
                 };
 
@@ -130,15 +138,15 @@
 
                 function_layer {
 // --------------------------------------------------------------------------------------------
-// |    |  F1   |  F2  |  F3  |  F4 |    |               |     | WASD|MOUSE|     |     |      |
-// |    |  F5   |  F6  |  F7  | F8  |    |               |     | ctrl|shft | alt | gui |      |
-// |    |  F9   |  F10 | F11  | F12 |    |               |     |     |     |     |     |      |
+// |    |  F4   |  F3  |  F2  | F1  |    |               |     | WASD|MOUSE|FITHT|     |      |
+// |    |  F8   |  F7  |  F6  | F5  |    |               |     | ctrl|shft | alt | gui |      |
+// |    |  F12  |  F11 | F10  | F9  |    |               |     |     |     |     |     |      |
 //                     |      |     |    |               |     |     |     |
                         bindings = <
-   &trans  &kp F1 &kp F2  &kp F3   &kp F4  &kp PSCRN           &trans &tog WASD &tog MOUSE &trans   &trans   &trans
-   &trans  &kp F5 &kp F6  &kp F7   &kp F8  &trans              &trans &kp RCTRL &kp RSHFT  &kp RALT &kp RGUI &trans
-   &trans  &kp F9 &kp F10 &kp F11  &kp F12 &kp PAUSE_BREAK     &trans &trans    &trans     &trans   &trans   &trans
-                          &trans   &trans  &trans              &trans &trans    &trans
+   &trans  &kp F4  &kp F3  &kp F2   &kp F1  &kp PSCRN           &trans &tog WASD &tog MOUSE &tog FIGHT &trans   &trans
+   &trans  &kp F8  &kp F7  &kp F6   &kp F5  &trans              &trans &kp RCTRL &kp RSHFT  &kp RALT   &kp RGUI &trans
+   &trans  &kp F12 &kp F11 &kp F10  &kp F9  &kp PAUSE_BREAK     &trans &trans    &trans     &trans     &trans   &trans
+                           &trans   &trans  &trans              &trans &trans    &trans
                         >;
                 };
 
@@ -195,6 +203,20 @@
    &trans  &kp LSHIFT &kp A &kp S   &kp D     &kp F      &trans    &trans    &trans &trans &trans &trans
    &trans  &kp LCTRL  &kp Z &kp X   &kp C     &kp V      &trans    &trans    &trans &trans &trans &trans
                            &trans   &kp SPACE &trans     &trans    &tog WASD &tog MOUSE
+                        >;
+                };
+
+                 fightstick_layer {
+// -------------------------------------------------------------------------------------------
+// |      |     |     |     |     |     |               |     |     |     |     |     |      |
+// |      |     | LFT | DWN | RGT |     |               |     |  X  |  Y  |  3  |  4  |      |
+// |      |     |     |     |     |     |               |     |  A  |  B  |  1  |  2  |      |
+//                    |     | UP  |     |               |     |  UP |     |
+                        bindings = <
+   &trans &trans &trans   &trans   &trans    &trans      &trans    &trans   &trans &trans &trans &trans
+   &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans      &trans    &kp X    &kp Y  &kp N3 &kp N4 &trans
+   &trans &trans &trans   &trans   &trans    &trans      &trans    &kp A    &kp B  &kp N1 &kp N2 &trans
+                          &trans   &kp UP    &trans      &trans    &kp UP   &tog FIGHT
                         >;
                 };
         };
