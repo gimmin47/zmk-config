@@ -105,6 +105,7 @@
                         quick-tap-ms = <100>;
                         bindings = <&kp>, <&kp>;
                 };
+
         };
         keymap {
                 compatible = "zmk,keymap";
@@ -113,13 +114,13 @@
 // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |      |  Q           |  W           |  F             |  P             |  B      |  //  |  J     |  L             |  U              |  Y           |  '"          |     |
 // |      |  A-NUM       |  R-alt       |  S-shift       |  T-ctrl        |  G      |  //  |  M     |  N-ctrl        |  E-shift        |  I-alt       |  O           |     |
-// |      |  Z-gui       |  X           |  C             |  D             |  V      |  //  |  K     |  H             |  ,              |  .           |  /-gui       |     |
-//                                      |  BACKSPACE     |  SPC (nav)     |TAB (mse)|  //  |        |  ENT (func)    |  DEL (special)  |
+// |      |  Z-gui       |  X           |  C             |  D             |  V      |  //  |  K     |  H             |  ,<             |  .>          |  /?gui       |     |
+//                                      |  BACKSPACE     |  SPC (nav)     |TAB (mse)|  //  |        |                |  ENT (func)     |
                         bindings = <
-    &kp Q          &kp W          &kp F            &kp P            &kp B            &kp J    &kp L            &kp U             &kp Y          &kp SQT
-    &lt NUMPAD A   &lh_alt LALT R &lh_shft LSHFT S &lh_ctrl LCTRL T &kp G            &kp M    &rh_ctrl RCTRL N &rh_shft RSHFT E  &rh_alt RALT I &kp O
-    &kp Z          &kp X          &kp C            &kp D            &kp V            &kp K    &kp H            &kp COMMA         &kp DOT        &rh_gui RGUI FSLH
-                                  &kp BKSP         &lt NAV SPACE    &lt MOUSE TAB    &trans   &lt SPECIAL RET  &lt FUNCTION DEL
+    &kp Q          &kp W          &kp F            &kp P            &kp B                    &kp J    &kp L            &kp U             &kp Y          &lt FUNCTIOIN SQT
+    &lt NUMPAD A   &lh_alt LALT R &lh_shft LSHFT S &lh_ctrl LCTRL T &kp G                    &kp M    &rh_ctrl RCTRL N &rh_shft RSHFT E  &rh_alt RALT I &kp O
+    &kp Z          &kp X          &kp C            &kp D            &kp V                    &kp K    &kp H            &kp COMMA         &kp DOT        &rh_gui RGUI FSLH
+                                  &kp BKSP         &lt NAV SPACE    &lt MOUSE TAB            &trans   &trans           &lt SPECIAL RET
                         >;
                 };
 
@@ -166,16 +167,16 @@
                 };
 
                 numpad_layer {
-// -------------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |               |     |  7  |  8  |  9  |     |      |
-// |      |     |     |     |     |     |               |  .  |  4  |  5  |  6  |  .  |      |
-// |      |     |     |     |     |     |               |     |  1  |  2  |  3  |     |      |
-//                    |     |     |     |               |     |  0  |     |
+// ----------------------------------------------------------------------------------------------
+// |      |     |     |     |     |        |               |     |  7  |  8  |  9  |     |      |
+// |      |     |     |     |     |        |               |  .  |  4  |  5  |  6  |  .  |      |
+// |      |     |     |     |     |        |               |     |  1  |  2  |  3  |     |      |
+//                    |     |     |        |               |     |  0  |     |
                         bindings = <
-     &trans   &trans &trans   &trans   &trans   &trans    &kp N7  &kp N8 &kp N9 &trans
-     &trans   &trans &trans   &trans   &trans   &kp DOT   &kp N4  &kp N5 &kp N6 &kp DOT
-     &trans   &trans &trans   &trans   &trans   &trans    &kp N1  &kp N2 &kp N3 &trans
-                     &trans   &trans   &trans   &trans    &kp N0  &trans
+     &trans   &trans &trans   &trans   &trans           &trans    &kp N7  &kp N8 &kp N9 &trans
+     &trans   &trans &trans   &trans   &trans           &kp DOT   &kp N4  &kp N5 &kp N6 &kp DOT
+     &trans   &trans &trans   &trans   &trans           &trans    &kp N1  &kp N2 &kp N3 &trans
+                     &kp DEL  &trans   &kp RET          &trans    &kp N0  &trans
                         >;
                 };
 
