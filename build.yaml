@@ -14,8 +14,8 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: corne_left
+    shield: chonky_trackball_less_left
   - board: nice_nano_v2
-    shield: corne_right
+    shield: chonky_trackball_less_right
   - board: nice_nano_v2
     shield: settings_reset
