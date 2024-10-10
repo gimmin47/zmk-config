@@ -37,7 +37,7 @@
                         tapping-term-ms = <250>;
                         quick-tap-ms = <300>;
                         bindings = <&kp>, <&kp>;
-                        hold-trigger-key-positions = <4 13 16 25 26 27 29>;
+                        hold-trigger-key-positions = <4 13 14 16 25 26 27 29>;
                 };
                 lh_alt: left_hand_alt {
                         compatible = "zmk,behavior-hold-tap";
@@ -64,7 +64,7 @@
                         label = "POSITIONAL_HOLD_TAP_LEFT_SHIFT";
                         #binding-cells = <2>;
                         flavor = "balanced";
-                        tapping-term-ms = <250>;
+                        tapping-term-ms = <175>;
                         quick-tap-ms = <300>;
                         bindings = <&kp>, <&kp>;
                 };
@@ -73,7 +73,7 @@
                         label = "POSITIONAL_HOLD_TAP_RIGHT_SHIFT";
                         #binding-cells = <2>;
                         flavor = "balanced";
-                        tapping-term-ms = <250>;
+                        tapping-term-ms = <175>;
                         quick-tap-ms = <300>;
                         bindings = <&kp>, <&kp>;
                 };
@@ -82,7 +82,7 @@
                         label = "POSITIONAL_HOLD_TAP_LEFT_GUI";
                         #binding-cells = <2>;
                         flavor = "balanced";
-                        tapping-term-ms = <250>;
+                        tapping-term-ms = <200>;
                         quick-tap-ms = <300>;
                         bindings = <&kp>, <&kp>;
                 };
@@ -101,7 +101,16 @@
                         label = "POSITIONAL_HOLD_TAP_SPACE_NAV";
                         #binding-cells = <2>;
                         flavor = "balanced";
-                        tapping-term-ms = <250>;
+                        tapping-term-ms = <200>;
+                        quick-tap-ms = <100>;
+                        bindings = <&kp>, <&kp>;
+                };
+                spc_ret: special_return {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "POSITIONAL_HOLD_TAP_SPECIAL_RET";
+                        #binding-cells = <2>;
+                        flavor = "balanced";
+                        tapping-term-ms = <175>;
                         quick-tap-ms = <100>;
                         bindings = <&kp>, <&kp>;
                 };
@@ -124,7 +133,7 @@
                         >;
                 };
 
-                special_layer {
+                special_layer {ts
 // --------------------------------------------------------------------------------------------
 // |    |  !   |  @   |  #   |  $  |  %  |               |  ^  |  &  |  *  |  (  |  )  |      |
 // |    |      |  alt |  shft| ctrl|     |               |  =  |  -  |  [  |  ]  |  ;  |      |
@@ -176,7 +185,7 @@
      &trans   &trans &trans   &trans   &trans           &trans    &kp N7  &kp N8 &kp N9 &trans
      &trans   &trans &trans   &trans   &trans           &kp DOT   &kp N4  &kp N5 &kp N6 &kp DOT
      &trans   &trans &trans   &trans   &trans           &trans    &kp N1  &kp N2 &kp N3 &trans
-                     &kp DEL  &trans   &kp RET          &trans    &kp N0  &trans
+                     &kp DEL  &trans   &kp RET          &trans    &trans  &kp N0
                         >;
                 };
 
