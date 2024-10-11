@@ -121,9 +121,9 @@
 
                 default_layer {
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |      |  Q           |  W           |  F             |  P             |  B      |  //  |  J     |  L             |  U              |  Y           |  '"          |
-// |      |  A-NUM       |  R-alt       |  S-shift       |  T-ctrl        |  G      |  //  |  M     |  N-ctrl        |  E-shift        |  I-alt       |  O           |
-// |      |  Z           |  X           |  C             |  D             |  V      |  //  |  K     |  H             |  ,<             |  .>          |  /?gui       |
+// |     Q           |  W           |  F             |  P             |  B      |  //  |  J     |  L             |  U              |  Y           |  '"          |
+// |     A-NUM       |  R-alt       |  S-shift       |  T-ctrl        |  G      |  //  |  M     |  N-ctrl        |  E-shift        |  I-alt       |  O           |
+// |     Z           |  X           |  C             |  D             |  V      |  //  |  K     |  H             |  ,<             |  .>          |  /?gui       |
 //                                      |  BACKSPACE     |  SPC (nav)     |TAB (mse)|  //  |        |                |  ENT (special)  |
                         bindings = <
     &kp Q          &kp W          &kp F            &kp P            &kp B                    &kp J    &kp L            &kp U             &kp Y          &lt FUNCTION SQT
@@ -171,7 +171,7 @@
             &kp ESC      &trans       &trans       &trans       &trans                  &trans           &trans         &trans  &trans    &trans
             &trans       &kp LALT     &kp LSHFT    &kp LCTRL    &bt BT_CLR              &kp LEFT         &kp DOWN       &kp UP  &kp RIGHT &trans
             &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4            &kp INS          &kp HOME       &kp END &kp PG_UP &kp PG_DN
-                                      &trans       &trans       &trans                  &K_VOLUME_DOWN   &K_VOLUME_UP   &trans
+                                      &trans       &trans       &trans                  &kp K_VOLUME_DOWN   &kp K_VOLUME_UP   &trans
                         >;
                 };
 
