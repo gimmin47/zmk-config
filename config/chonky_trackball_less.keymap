@@ -27,7 +27,7 @@
                         tapping-term-ms = <250>;
                         quick-tap-ms = <300>;
                         bindings = <&kp>, <&kp>;
-                        hold-trigger-key-positions = <1 2 3 12 13 14 15 19 25 26>;
+                        #hold-trigger-key-positions = <1 2 3 12 13 14 15 19 25 26>;
                 };
                 rh_ctrl: right_hand_control {
                         compatible = "zmk,behavior-hold-tap";
@@ -37,7 +37,7 @@
                         tapping-term-ms = <250>;
                         quick-tap-ms = <300>;
                         bindings = <&kp>, <&kp>;
-                        hold-trigger-key-positions = <3 4 13 14 16 17 25 26 27 29>;
+                        #hold-trigger-key-positions = <3 4 13 14 16 17 25 26 27 29>;
                 };
                 lh_alt: left_hand_alt {
                         compatible = "zmk,behavior-hold-tap";
@@ -47,7 +47,7 @@
                         tapping-term-ms = <250>;
                         quick-tap-ms = <300>;
                         bindings = <&kp>, <&kp>;
-                        hold-trigger-key-positions = <12 28>;
+                        #hold-trigger-key-positions = <12 28>;
                 };
                 rh_alt: right_hand_alt {
                         compatible = "zmk,behavior-hold-tap";
@@ -94,7 +94,7 @@
                         tapping-term-ms = <250>;
                         quick-tap-ms = <300>;
                         bindings = <&kp>, <&kp>;
-                        hold-trigger-key-positions = <7 12 14>;
+                        #hold-trigger-key-positions = <7 12 14>;
                 };
                 spc_nav: space_navigation {
                         compatible = "zmk,behavior-hold-tap";
