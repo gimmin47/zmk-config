@@ -16,8 +16,20 @@
 #define WASD 5
 #define FIGHT 6
 
+&caps_word {
+        continue-list = <UNDERSCORE MINUS>;
+};
+
 / {
         behaviors {
+                combos {
+                        compatible = "zmk,combos";
+                        combo_caps_word {
+                                timeout-ms = <50>;
+                                key-positions = <12 17>;
+                                bindings = <&caps_word>;
+                        };
+                };
                 lh_ctrl: left_hand_control {
                         compatible = "zmk,behavior-hold-tap";
                         label = "POSITIONAL_HOLD_TAP_LEFT_CONTROL";
@@ -174,7 +186,7 @@
      &kp ESC        &trans         &trans         &trans          &trans                  &trans              &trans           &trans     &trans      &trans
      &trans         &kp LALT       &kp LSHFT      &kp LCTRL       &bt BT_CLR              &kp LEFT            &kp DOWN         &kp UP     &kp RIGHT   &trans
      &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4            &kp INS             &kp HOME         &kp END    &kp PG_UP   &kp PG_DN
-                                      &trans       &trans         &trans                  &kp K_VOLUME_DOWN   &kp K_VOLUME_UP  &trans
+                                   &trans         &trans          &trans                  &kp K_VOLUME_DOWN   &kp K_VOLUME_UP  &trans
                         >;
                 };
 
