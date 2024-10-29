@@ -254,14 +254,14 @@
 
                 left_hands_layer {
 //       |---------------------------------------------------//---------------------------------------------------| //
-//       |       |   ESC    |         |         |        |   //   |       |         |       |        |            | //
-//       |       |          |         |    E    |        |   //   |       |         |       |        |            | //
+//       |  ESC  |          |         |         |        |   //   |       |         |       |        |            | //
+//       |       |          |    E    |         |        |   //   |       |         |       |        |            | //
 //       |       |          |         |         |        |   //   |       |         |       |        |            | //
 //       |                  \         |         |        |   //   |       |         |       /                     | //
 //       |===================================================//===================================================| //
                         bindings = <
 &trans    &kp ESC     &trans    &trans    &trans  &trans            &trans   &trans   &trans  &trans   &trans  &trans
-&trans    &trans      &trans    &trans    &kp E   &trans            &trans   &trans   &trans  &trans   &trans  &trans
+&trans    &trans      &trans    &kp E     &trans  &trans            &trans   &trans   &trans  &trans   &trans  &trans
 &trans    &trans      &trans    &trans    &trans  &trans            &trans   &trans   &trans  &trans   &trans  &trans
                                 &trans    &trans  &trans            &trans   &trans   &trans
                         >;
