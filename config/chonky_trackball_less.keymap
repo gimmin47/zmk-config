@@ -255,13 +255,13 @@
                 left_hands_layer {
 // |-------------------------------------------------//---------------------------------------------------| //
 // |       |   ESC    |         |         |       |   //   |      |         |           |        |        | //
-// |       |          |         |         |       |   //   |      |         |           |        |        | //
+// |       |          |         |    E    |       |   //   |      |         |           |        |        | //
 // |       |          |         |         |       |   //   |      |         |           |        |        | //
 // |                  \         |         |       |   //   |      |         |           /                 | //
 // |=================================================//===================================================| //
                         bindings = <
     &kp ESC     &trans    &trans    &trans     &trans          &trans   &trans   &trans      &trans   &trans
-    &trans      &trans    &trans    &trans     &trans          &trans   &trans   &trans      &trans   &trans
+    &trans      &trans    &trans    &kp E      &trans          &trans   &trans   &trans      &trans   &trans
     &trans      &trans    &trans    &trans     &trans          &trans   &trans   &trans      &trans   &trans
                           &trans    &trans     &trans          &trans   &trans   &trans
                         >;
