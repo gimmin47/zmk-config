@@ -254,15 +254,15 @@
 
                 left_hands_layer {
 // |-------------------------------------------------//---------------------------------------------------| //
-// |  ESC  |          |         |         |       |   //   |      |         |           |        |        | //
-// |       |          |    E    |         |       |   //   |      |         |           |        |        | //
-// |       |          |         |         |       |   //   |      |         |           |        |        | //
+// |  ESC  |     Y    |    U    |    L    |   J   |   //   |      |         |           |        |        | //
+// |   O   |     I    |    E    |    N    |   M   |   //   |      |         |           |        |        | //
+// |       |          |         |    H    |   K   |   //   |      |         |           |        |        | //
 // |                  \         |         |       |   //   |      |         |           /                 | //
 // |=================================================//===================================================| //
                         bindings = <
-    &kp ESC     &trans    &trans    &trans     &trans          &trans   &trans   &trans      &trans   &trans
-    &trans      &trans    &kp E     &trans     &trans          &trans   &trans   &trans      &trans   &trans
-    &trans      &trans    &trans    &trans     &trans          &trans   &trans   &trans      &trans   &trans
+    &kp ESC     &kp Y     &kp U     &kp L      &kp J           &trans   &trans   &trans      &trans   &trans
+    &kp O       &kp I     &kp E     &kp N      &kp M           &trans   &trans   &trans      &trans   &trans
+    &trans      &trans    &trans    &kp H      &kp K           &trans   &trans   &trans      &trans   &trans
                           &trans    &trans     &trans          &trans   &trans   &trans
                         >;
                 };
