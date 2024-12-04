@@ -16,7 +16,7 @@
 #define NUMPAD 5
 #define WASD 6
 #define FIGHT 7
-#define LH 8
+#define SH 8
 
 &caps_word {
         continue-list = <UNDERSCORE MINUS>;
@@ -141,9 +141,9 @@
 // |=========================================================================================================//===========================================================================================| //
                         bindings = <
          &kp Q               &kp W               &kp F                &kp P               &kp B                      &kp J     &kp L              &kp U               &kp Y            &lt FUNCTION SQT
-         &lt NUMPAD A        &lh_alt LALT R      &lh_shft LSHFT S     &lh_ctrl LCTRL T    &kp G                      &kp M     &rh_ctrl RCTRL N   &rh_shft RSHFT E    &rh_alt RALT I   &kp O
+         &lt NUMPAD A        &lh_alt LALT R      &lh_shft LSHFT S     &lh_ctrl LCTRL T    &kp G                      &kp M     &rh_ctrl RCTRL N   &rh_shft RSHFT E    &rh_alt RALT I   &lt NAV O
          &kp Z               &kp X               &kp C                &kp D               &kp V                      &kp K     &kp H              &kp COMMA           &kp DOT          &rh_gui RGUI FSLH
-                                                 &kp BKSP             &lt NAV SPACE       &lt LH TAB                 &none     &kp RALT           &lt SPECIAL RET
+                                                 &kp BKSP             &lt NAV SPACE       &lt SH TAB                 &lt SH SPACE     &kp RALT           &lt SPECIAL RET
                         >;
                 };
 
@@ -252,18 +252,18 @@
                         >;
                 };
 
-                left_hands_layer {
-// |-------------------------------------------------//---------------------------------------------------| //
-// |  ESC  |     Y    |    U    |    L    |   J   |   //   |      |         |           |        |        | //
-// |   O   |     I    |    E    |    N    |   M   |   //   |      |         |           |        |        | //
-// |       |          |         |    H    |   K   |   //   |      |         |           |        |        | //
-// |                  \         |         |       |   //   |      |         |           /                 | //
-// |=================================================//===================================================| //
+                single_hand_layer {
+// |--------------------------------------------------//---------------------------------------------------| //
+// |  ESC  |     Y    |    U    |    L    |   J   |   //   |   B  |    P    |    F      |   W    |   Q     | //
+// |   O   |     I    |    E    |    N    |   M   |   //   |   G  |    T    |    S      |   R    |   A     | //
+// |   Q   |          |         |    H    |   K   |   //   |   V  |    D    |    C      |   X    |   Z     | //
+// |                  \         |         |       |   //   |      |         |           /                  | //
+// |==================================================//===================================================| //
                         bindings = <
-    &kp ESC     &kp Y     &kp U     &kp L      &kp J           &trans   &trans   &trans      &trans   &trans
-    &kp O       &kp I     &kp E     &kp N      &kp M           &trans   &trans   &trans      &trans   &trans
-    &trans      &trans    &trans    &kp H      &kp K           &trans   &trans   &trans      &trans   &trans
-                          &trans    &trans     &trans          &trans   &trans   &trans
+    &kp ESC     &kp Y     &kp U     &kp L      &kp J         &kp B    &kp P    &kp F       &kp W    &kp Q
+    &kp O       &kp I     &kp E     &kp N      &kp M         &kp G    &kp T    &kp S       &kp R    &kp A
+    &kp Q       &trans    &trans    &kp H      &kp K         &kp V    &kp D    &kp C       &kp X    &kp Z
+                          &trans    &trans     &trans        &trans   &trans   &trans
                         >;
                 };
 
