@@ -143,7 +143,7 @@
          &kp Q               &kp W               &kp F                &kp P               &kp B                      &kp J     &kp L              &kp U               &kp Y            &lt FUNCTION SQT
          &lt NUMPAD A        &lh_alt LALT R      &lh_shft LSHFT S     &lh_ctrl LCTRL T    &kp G                      &kp M     &rh_ctrl RCTRL N   &rh_shft RSHFT E    &rh_alt RALT I   &lt NAV O
          &kp Z               &kp X               &kp C                &kp D               &kp V                      &kp K     &kp H              &kp COMMA           &kp DOT          &rh_gui RGUI FSLH
-                                                 &kp BKSP             &lt NAV SPACE       &lt SH TAB                 &lt SH SPACE     &kp RALT           &lt SPECIAL RET
+                                                 &kp BKSP             &lt NAV SPACE       &lt SH TAB                 &lt SH SPACE     &lt NUMPAD RALT           &lt SPECIAL RET
                         >;
                 };
 
@@ -158,7 +158,7 @@
          &kp Q               &kp W               &kp E                &kp R               &kp T                      &kp Y     &kp U              &kp I               &kp O            &lt FUNCTION P
          &lt NUMPAD A        &lh_alt LALT S      &lh_shft LSHFT D     &lh_ctrl LCTRL F    &kp G                      &kp H     &rh_ctrl RCTRL J   &rh_shft RSHFT K    &rh_alt RALT L   &kp SQT
          &kp Z               &kp X               &kp C                &kp V               &kp B                      &kp N     &kp M              &kp COMMA           &kp DOT          &rh_gui RGUI FSLH
-                                                 &kp BKSP             &lt NAV SPACE       &lt SH TAB                 &lt SH SPACE     &kp RALT           &lt SPECIAL RET
+                                                 &kp BKSP             &lt NAV SPACE       &lt SH TAB                 &lt SH SPACE     &lt NUMPAD RALT           &lt SPECIAL RET
                         >;
                 };
 
