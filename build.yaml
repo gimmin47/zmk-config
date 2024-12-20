@@ -13,6 +13,8 @@
 #
 ---
 include:
+  - board: seeeduino_xiao_ble
+    shield: chonky_trackball_less_dongle prospector_adapter
   - board: nice_nano_v2
     shield: chonky_trackball_less_left
   - board: nice_nano_v2

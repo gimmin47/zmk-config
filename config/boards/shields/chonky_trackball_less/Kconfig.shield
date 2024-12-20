@@ -1,0 +1,9 @@
+# Copyright (c) 2020 Pete Johanson
+config SHIELD_CHONKY_TRACKBALL_LESS_LEFT
+    def_bool $(shields_list_contains,chonky_trackball_less_left)
+
+config SHIELD_CHONKY_TRACKBALL_LESS_RIGHT
+    def_bool $(shields_list_contains,chonky_trackball_less_right)
+
+config SHIELD_CHONKY_TRACKBALL_LESS_DONGLE
+    def_bool $(shields_list_contains,chonky_trackball_less_dongle)
