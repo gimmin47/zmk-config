@@ -4,7 +4,6 @@ name: chonky_trackball_less
 type: shield
 url: https://gitea.gimmin.com/billy/chonky_trackball
 requires: [pro_micro]
-exposes: [i2c_oled]
 features:
   - keys
 siblings:
