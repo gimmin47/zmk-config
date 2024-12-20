@@ -1,7 +1,7 @@
 if SHIELD_CHONKY_TRACKBALL_LESS_DONGLE
 
 config ZMK_KEYBOARD_NAME
-    default "Chonky_Trackball_Less Dongle"
+    default "Chonky Dongle"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
