@@ -1,7 +1,0 @@
-/ {
-   chosen {
-      zephyr,display = &st7789;
-  };
-};
-
-
