@@ -56,7 +56,7 @@
 	pinctrl-names = "default", "sleep";
 	cs-gpios = <&gpio1 12 GPIO_ACTIVE_LOW>;
 
-	pd0: pd0@0 {
+	pd: pd@0 {
 		compatible = "pixart,pmw3610";
 		status = "okay";
 		label = "MOU0";
@@ -72,8 +72,8 @@
 	};
 };
 
-&pd0_split {
-    device = <&pd0>;
+&pd_split {
+    device = <&pd>;
 
     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 };
