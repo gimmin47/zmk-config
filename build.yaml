@@ -19,6 +19,8 @@ include:
     shield: chonky_trackball_less_left
   - board: nice_nano_v2
     shield: chonky_trackball_less_right
+  - board: seeeduino_xiao_ble
+    shield: chonky_trackball_less_mouse
 #  - board: nice_nano_v2
 #    shield: corne_left
 #  - board: nice_nano_v2

@@ -7,6 +7,7 @@ requires: [pro_micro]
 features:
   - keys
 siblings:
+  - chonky_trackball_less_dongle
   - chonky_trackball_less_left
   - chonky_trackball_less_right
-  - chonky_trackball_less_dongle
+  - chonky_trackball_less_mouse
