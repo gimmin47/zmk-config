@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/gimmin47
     - name: carrefinho
       url-base: https://github.com/carrefinho
+    - name: badjeff
+      url-base: https://github.com/badjeff
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -13,6 +15,9 @@ manifest:
       import: app/west.yml
     - name: prospector-zmk-module
       remote: carrefinho
+      revision: main
+    - name: zmk-pmw3610-driver
+      remote: badjeff
       revision: main
   self:
     path: config
