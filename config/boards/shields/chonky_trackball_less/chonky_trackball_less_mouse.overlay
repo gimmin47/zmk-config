@@ -50,15 +50,15 @@
 
 &spi2 {
 	compatible = "nordic,nrf-spim";
-  status = "okay";
+	status = "okay";
 	pinctrl-0 = <&spi2_default>;
 	pinctrl-1 = <&spi2_sleep>;
 	pinctrl-names = "default", "sleep";
 	cs-gpios = <&gpio1 12 GPIO_ACTIVE_LOW>;
 
-	pd0: pd@0 {
+	pd0: pd0@0 {
 		compatible = "pixart,pmw3610";
-	  status = "okay";
+		status = "okay";
 		label = "MOU0";
 		reg = <0>;
 		spi-max-frequency = <4000000>;
@@ -72,11 +72,17 @@
 	};
 };
 
+&pd0_split {
+    device = <&pd0>;
+
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+};
+
 
 /{
 	s_encoder: s_encoder {
 		compatible = "alps,ec11";
-    status = "okay";
+		status = "okay";
 		// NFC pins in nRF52 series: P0.09 and P0.10
 		a-gpios = <&gpio0 0  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		b-gpios = <&gpio0 1  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
