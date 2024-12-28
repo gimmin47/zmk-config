@@ -57,11 +57,11 @@
                 map = <INPUT_REL_X INPUT_REL_MISC>, <INPUT_REL_Y INPUT_REL_WHEEL>;
         };
 
-        mou0_mmv_il {
-                compatible = "zmk,input-listener";
-                device = <&pd>;
-                input-processors = <&xy_transf (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
-        };
+        //mou0_mmv_il {
+        //        compatible = "zmk,input-listener";
+        //        device = <&pd>;
+        //        input-processors = <&xy_transf (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+        //};
 
         behaviors {
                 combos {
