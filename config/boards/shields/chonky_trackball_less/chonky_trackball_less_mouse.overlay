@@ -82,12 +82,5 @@
 	s_encoder: s_encoder {
 		status = "okay";
 	};
-
-	sensors: sensors {
-		compatible = "zmk,keymap-sensors";
-		status = "okay";
-		sensors = <&s_encoder>;
-		triggers-per-rotation = <12>;
-	};
 };
 

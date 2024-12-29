@@ -13,10 +13,6 @@
         events = <0>;
     };
 
-  s_encoder: s_encoder {
-        status = "okay";
-  };
-
 };
 
 &pd_listener {
@@ -25,3 +21,11 @@
 
 /delete-node/ &default_kscan;   // only required if the dongle uses a
                                 // different board than the peripherals
+
+
+/{
+	d_encoder: d_encoder {
+		status = "okay";
+	};
+
+};
