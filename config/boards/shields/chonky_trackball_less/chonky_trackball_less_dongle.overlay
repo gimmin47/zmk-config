@@ -22,9 +22,3 @@
 /delete-node/ &default_kscan;   // only required if the dongle uses a
                                 // different board than the peripherals
 
-
-/{
-	d_encoder: d_encoder {
-		status = "okay";
-	};
-};
