@@ -1,0 +1,8 @@
+#include <physical_layouts.dtsi>
+
+/ {
+    chonky_trackball_less_5col_mouse_layout: chonky_trackball_less_5col_mouse_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "5 Column W Mouse";
+    };
+};
