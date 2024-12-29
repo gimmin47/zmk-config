@@ -27,5 +27,4 @@
 	d_encoder: d_encoder {
 		status = "okay";
 	};
-
 };
