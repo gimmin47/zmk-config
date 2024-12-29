@@ -14,7 +14,7 @@
     };
 
   s_encoder: s_encoder {
-        status = "disabled";
+        status = "okay";
   };
 
 };
