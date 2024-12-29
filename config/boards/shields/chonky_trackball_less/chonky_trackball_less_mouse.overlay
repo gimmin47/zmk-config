@@ -83,8 +83,8 @@
 		compatible = "alps,ec11";
 		status = "okay";
 		// NFC pins in nRF52 series: P0.09 and P0.10
-		a-gpios = <&gpio0 0  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-		b-gpios = <&gpio0 1  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		a-gpios = <&gpio0 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		b-gpios = <&gpio0 3  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		steps = <48>;
 	};
 	sensors: sensors {
