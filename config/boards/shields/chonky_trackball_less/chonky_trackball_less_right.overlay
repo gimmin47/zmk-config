@@ -19,3 +19,7 @@
         , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         ;
 };
+
+&pd_split {
+    status = "disabled";
+};
