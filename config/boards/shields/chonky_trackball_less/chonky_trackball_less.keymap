@@ -179,9 +179,9 @@
                 rot_enc: rot_enc {
                         compatible = "zmk,behavior-sensor-rotate";
                         #sensor-binding-cells = <0>;
-                        //bindings = <&ec_s MOVE_Y(-37)>, <&ec_s MOVE_Y(37)>;
+                        bindings = <&ec_s MOVE_Y(-37)>, <&ec_s MOVE_Y(37)>;
                         //bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-                        bindings = <&kp X>, <&msc SCRL_DOWN>;
+                        //bindings = <&kp X>, <&msc SCRL_DOWN>;
                         tap-ms = <65>;
                 };
 
