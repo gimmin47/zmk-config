@@ -6,6 +6,7 @@
 
 #include "chonky_trackball_less.dtsi"
 #include <dt-bindings/zmk/input_transform.h>
+#include <input/processors.dtsi>
 
 &default_transform {
     col-offset = <10>;
