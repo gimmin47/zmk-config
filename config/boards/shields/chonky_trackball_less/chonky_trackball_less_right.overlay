@@ -24,4 +24,10 @@
     status = "disabled";
 };
 
-/delete-node/ &s_encoder;
+/{
+	s_encoder: s_encoder {
+		status = "disabled";
+		a-gpios = <&gpio0 50  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		b-gpios = <&gpio0 51  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+	};
+};
