@@ -23,3 +23,5 @@
 &pd_split {
     status = "disabled";
 };
+
+/delete-node/ &s_encoder;
