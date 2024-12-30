@@ -19,7 +19,7 @@
             ;
 
     col-gpios
-            //= <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			= <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 
         ;
 };
