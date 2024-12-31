@@ -15,7 +15,7 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/input_transform.h>
 
-#define COLMAK 0
+#define COLEMAK 0
 #define QWERTY 1
 #define SPECIAL 2
 #define FUNCTION 3
@@ -190,41 +190,41 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        display-name = "CLMK";
-// |---------------------------------------------------------------------------------------------------------//-------------------------------------------------------------------------------------------| |--------|//
-// |        Q           |       W            |       F             |     P             |      B         |    //    |   J     |    L             |   U               |    Y          |         '"          | | LClick |//
-// |        A-NUM       |       R-alt        |       S-shift       |     T-ctrl        |      G         |    //    |   M     |    N-ctrl        |   E-shift         |    I-alt      |         O           | | MClick |//
-// |        Z           |       X            |       C             |     D             |      V         |    //    |   K     |    H             |   ,<              |    .>         |         /?gui       | | RClick |//
-// |                                         \       BACKSPACE     |     SPC (nav)     |      TAB       |    //    |         |                  |   ENT (special)   /                                     | | Back   |//
-// |=========================================================================================================//===========================================================================================| |--------|//
+                        display-name = "COLEMAK";
+// |-------------------------------------------------------------------------| |------------------------------------------------------------------------------| |--------|//
+// | Q           | W            | F              | P              | B        | | J           | L               | U              | Y            | '"           | | LClick |//
+// | A-NUM       | R-alt        | S-shift        | T-ctrl         | G        | | M           | N-ctrl          | E-shift        | I-alt        | O            | | MClick |//
+// | Z           | X            | C              | D              | V        | | K           | H               | ,<             | .>           | /?gui        | | RClick |//
+// |                            \ BACKSPACE      | SPC (nav)      | TAB      | |             |                 | ENT (special)  /                             | | Back   |//
+// |=========================================================================| |==============================================================================| |--------|//
                         bindings = <
-         &kp Q               &kp W               &kp F                &kp P               &kp B                      &kp J     &kp L              &kp U               &kp Y            &lt FUNCTION SQT      &mkp LCLK
-         &lt NUMPAD A        &lh_alt LALT R      &lh_shft LSHFT S     &lh_ctrl LCTRL T    &kp G                      &kp M     &rh_ctrl RCTRL N   &rh_shft RSHFT E    &rh_alt RALT I   &lt NAV O             &mkp MCLK
-         &kp Z               &kp X               &kp C                &kp D               &kp V                      &kp K     &kp H              &kp COMMA           &kp DOT          &rh_gui RGUI FSLH     &mkp RCLK
-                                                 &kp BKSP             &lt NAV SPACE       &lt SH TAB                 &lt SH SPACE     &lt NUMPAD RALT           &lt SPECIAL RET                              &mkp MB4
+    &kp Q        &kp W          &kp F            &kp P            &kp B         &kp J        &kp L            &kp U            &kp Y          &lt FUNCTION SQT   &mkp LCLK
+    &lt NUMPAD A &lh_alt LALT R &lh_shft LSHFT S &lh_ctrl LCTRL T &kp G         &kp M        &rh_ctrl RCTRL N &rh_shft RSHFT E &rh_alt RALT I &lt NAV O          &mkp MCLK
+    &kp Z        &kp X          &kp C            &kp D            &kp V         &kp K        &kp H            &kp COMMA        &kp DOT        &rh_gui RGUI FSLH  &mkp RCLK
+                                &kp BKSP         &lt NAV SPACE    &lt SH TAB    &lt SH SPACE &lt NUMPAD RALT  &lt SPECIAL RET                                    &mkp MB4
                         >;
                         sensor-bindings = <&rot_enc>;
                 };
 
                 qwerty_layer {
                         display-name = "QWERTY";
-// |---------------------------------------------------------------------------------------------------------//-------------------------------------------------------------------------------------------| |--------|//
-// |        Q           |       W            |       E             |     R             |      T         |    //    |   Y     |    U             |   I               |    O          |         P           | | LClick |//
-// |        A-NUM       |       S-alt        |       D-shift       |     F-ctrl        |      G         |    //    |   H     |    J-ctrl        |   K-shift         |    L-alt      |         ;:          | | MClick |//
-// |        Z           |       X            |       C             |     V             |      B         |    //    |   N     |    M             |   ,<              |    .>         |         /?gui       | | RClick |//
-// |                                         \       BACKSPACE     |     SPC (nav)     |      TAB       |    //    |         |                  |   ENT (special)   /                                     | | Back   |//
-// |=========================================================================================================//===========================================================================================| |--------|//
+// |-------------------------------------------------------------------------| |------------------------------------------------------------------------------| |--------|//
+// | Q           | W            | E              | R              | T        | | Y           | U              | I              | O            | P             | | LClick |//
+// | A-NUM       | S-alt        | D-shift        | F-ctrl         | G        | | H           | J-ctrl         | K-shift        | L-alt        | ;:            | | MClick |//
+// | Z           | X            | C              | V              | B        | | N           | M              | ,<             | .>           | /?gui         | | RClick |//
+// |                            \ BACKSPACE      | SPC (nav)      | TAB      | |             |                | ENT (special)  /                              | | Back   |//
+// |=========================================================================| |==============================================================================| |--------|//
                         bindings = <
-         &kp Q               &kp W               &kp E                &kp R               &kp T                      &kp Y     &kp U              &kp I               &kp O            &lt FUNCTION P        &mkp LCLK
-         &lt NUMPAD A        &lh_alt LALT S      &lh_shft LSHFT D     &lh_ctrl LCTRL F    &kp G                      &kp H     &rh_ctrl RCTRL J   &rh_shft RSHFT K    &rh_alt RALT L   &kp SQT               &mkp MCLK
-         &kp Z               &kp X               &kp C                &kp V               &kp B                      &kp N     &kp M              &kp COMMA           &kp DOT          &rh_gui RGUI FSLH     &mkp RCLK
-                                                 &kp BKSP             &lt NAV SPACE       &lt SH TAB                 &lt SH SPACE     &lt NUMPAD RALT           &lt SPECIAL RET                              &mkp MB4
+    &kp Q        &kp W          &kp E            &kp R            &kp T         &kp Y        &kp U            &kp I            &kp O          &lt FUNCTION P     &mkp LCLK
+    &lt NUMPAD A &lh_alt LALT S &lh_shft LSHFT D &lh_ctrl LCTRL F &kp G         &kp H        &rh_ctrl RCTRL J &rh_shft RSHFT K &rh_alt RALT L &kp SQT            &mkp MCLK
+    &kp Z        &kp X          &kp C            &kp V            &kp B         &kp N        &kp M            &kp COMMA        &kp DOT        &rh_gui RGUI FSLH  &mkp RCLK
+                                &kp BKSP         &lt NAV SPACE    &lt SH TAB    &lt SH SPACE &lt NUMPAD RALT  &lt SPECIAL RET                                    &mkp MB4
                         >;
                         sensor-bindings = <&rot_enc>;
                 };
 
                 special_layer {
-                        display-name = "SPC";
+                        display-name = "SPECIAL";
 // |-------------------------------------------------------------//--------------------------------------------------------------------| //
 // |     !    |    @      |    #     |    $     |   %       |    //    |     ^     |     &     |        *        |     (    |     )    | //
 // |          |    alt    |    shft  |    ctrl  |           |    //    |     =     |     -     |        [        |     ]    |     ;    | //
@@ -241,7 +241,7 @@
                 };
 
                 function_layer {
-                        display-name = "FCN";
+                        display-name = "FUNCTION";
 // |----------------------------------------------------------//------------------------------------------------------------| //
 // |   F4    |   F3   |   F2    |   F1   | Prnt SCR       |   //   |       |    WASD   |            |    FIGHT   |          | //
 // |   F8    |   F7   |   F6    |   F5   |                |   //   |       |    ctrl   |    shft    |    alt     |    gui   | //
@@ -275,7 +275,7 @@
                 };
 
                 numpad_layer {
-                        display-name = "NUMPD";
+                        display-name = "NUMPAD";
 // |--------------------------------------------------//------------------------------------------------| //
 // |        |        |         |        |         |   //   |        |    7   |    8   |    9   |        | //
 // |        |        |         |        |         |   //   |    .   |    4   |    5   |    6   |    .   | //
