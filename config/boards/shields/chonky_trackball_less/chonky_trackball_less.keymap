@@ -68,7 +68,7 @@
                         compatible = "zmk,combos";
                         combo_caps_word {
                                 timeout-ms = <50>;
-                                key-positions = <12 17>;
+                                key-positions = <26 27>;
                                 bindings = <&caps_word>;
                         };
                 };
@@ -195,7 +195,7 @@
 // | Q           | W            | F              | P              | B        | | J           | L               | U              | Y            | '"           | | LClick |//
 // | A-NUM       | R-alt        | S-shift        | T-ctrl         | G        | | M           | N-ctrl          | E-shift        | I-alt        | O            | | MClick |//
 // | Z           | X            | C              | D              | V        | | K           | H               | ,<             | .>           | /?gui        | | RClick |//
-// |                            \ BACKSPACE      | SPC (nav)      | TAB      | |             |                 | ENT (special)  /                             | | Back   |//
+// |                            \ BACKSPACE      | SPC (nav)      | TAB-SH   | | SPACE-SH    | RALT-NUM        | ENT (special)  /                             | | Back   |//
 // |=========================================================================| |==============================================================================| |--------|//
                         bindings = <
     &kp Q        &kp W          &kp F            &kp P            &kp B         &kp J        &kp L            &kp U            &kp Y          &lt FUNCTION SQT   &mkp LCLK
