@@ -62,7 +62,7 @@
 		compatible = "pixart,pmw3610";
 		status = "okay";
 		reg = <0>;
-		spi-max-frequency = <4000000>;
+		spi-max-frequency = <2000000>;
 
 		// pmw3610 driver parameters
 		irq-gpios = <&xiao_d 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
