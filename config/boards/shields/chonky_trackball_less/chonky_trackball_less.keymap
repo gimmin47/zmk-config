@@ -24,6 +24,7 @@
 #define WASD 6
 #define FIGHT 7
 #define SH 8
+#define MINECRAFT 9
 
 &caps_word {
         continue-list = <UNDERSCORE MINUS>;
@@ -243,16 +244,16 @@
                 function_layer {
                         display-name = "FUNCTN";
 // |----------------------------------------------------------//------------------------------------------------------------| //
-// |   F4    |   F3   |   F2    |   F1   | Prnt SCR       |   //   |       |    WASD   |            |    FIGHT   |          | //
+// |   F4    |   F3   |   F2    |   F1   | Prnt SCR       |   //   |       |    WASD   | MINECRAFT  |    FIGHT   |          | //
 // |   F8    |   F7   |   F6    |   F5   |                |   //   |       |    ctrl   |    shft    |    alt     |    gui   | //
 // |   F12   |   F11  |   F10   |   F9   |                |   //   |       |  QWERTY   |  COLEMAK   |            |          | //
 // |                  \         |        | Pause Break    |   //   |       |           |            /                       | //
 // |==========================================================//============================================================| //
                         bindings = <
-     &kp F4    &kp F3   &kp F2    &kp F1  &kp PSCRN                  &trans  &tog WASD   &trans       &tog FIGHT   &trans    &trans
-     &kp F8    &kp F7   &kp F6    &kp F5  &trans                     &trans  &kp RCTRL   &kp RSHFT    &kp RALT     &kp RGUI  &trans
-     &kp F12   &kp F11  &kp F10   &kp F9  &kp PAUSE_BREAK            &trans  &to QWERTY  &to COLEMAK  &trans       &trans    &trans
-                        &trans    &trans  &trans                     &trans  &trans      &trans                              &trans
+     &kp F4    &kp F3   &kp F2    &kp F1  &kp PSCRN                  &trans  &tog WASD   &tog MINECRAFT &tog FIGHT   &trans    &trans
+     &kp F8    &kp F7   &kp F6    &kp F5  &trans                     &trans  &kp RCTRL   &kp RSHFT      &kp RALT     &kp RGUI  &trans
+     &kp F12   &kp F11  &kp F10   &kp F9  &kp PAUSE_BREAK            &trans  &to QWERTY  &to COLEMAK    &trans       &trans    &trans
+                        &trans    &trans  &trans                     &trans  &trans      &trans                                &trans
                         >;
                         sensor-bindings = <&rot_enc>;
                 };
@@ -338,6 +339,23 @@
     &kp O       &kp I     &kp E     &kp N      &kp M         &kp G    &kp T    &kp S       &kp R    &kp A       &trans
     &trans      &trans    &trans    &kp H      &kp K         &kp V    &kp D    &kp C       &kp X    &kp Z       &trans
                           &trans    &trans     &trans        &trans   &trans   &trans                           &trans
+                        >;
+                        sensor-bindings = <&rot_enc>;
+                };
+
+                minecraft_layer {
+                        display-name = "MC";
+// |----------------------------------------------------//-------------------------------------------------| //
+// |    TAB    |   Q   |    W   |     E     |   R   |   //   |       |           |       |        |        | //
+// |    LSHT   |   A   |    S   |     D     |   F   |   //   |       |           |       |        |        | //
+// |    LCTL   |   Z   |    X   |     C     |   V   |   //   |       |           |       |        |        | //
+// |                   \        |           |       |   //   |       |    WASD   |       /                 | //
+// |====================================================//=================================================| //
+                        bindings = <
+    &lt NUMPAD Q &kp W          &kp F            &kp P            &kp B         &kp J          &kp L         &kp U            &kp Y          &lt FUNCTION SQT   &trans
+    &kp A        &kp R          &kp S            &kp T            &kp G         &kp M          &kp N         &kp E            &kp I          &kp O              &trans
+    &kp Z        &kp X          &kp C            &kp D            &kp V         &kp K          &kp H         &kp COMMA        &kp DOT        &kp FSLH           &trans
+                                &kp BKSP         &lt SPACE        &lt SH TAB    &tog MINECRAFT &kp RSHIFT    &lt SPECIAL RET
                         >;
                         sensor-bindings = <&rot_enc>;
                 };
