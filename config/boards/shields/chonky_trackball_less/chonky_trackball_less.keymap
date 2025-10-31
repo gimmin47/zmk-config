@@ -17,14 +17,14 @@
 
 #define COLEMAK 0
 #define QWERTY 1
-#define SPECIAL 2
-#define FUNCTION 3
-#define NAV 4
-#define NUMPAD 5
-#define WASD 6
-#define FIGHT 7
-#define SH 8
-#define MINECRAFT 9
+#define MINECRAFT 2
+#define SPECIAL 3
+#define FUNCTION 4
+#define NAV 5
+#define NUMPAD 6
+#define WASD 7
+#define FIGHT 8
+#define SH 9
 
 &caps_word {
         continue-list = <UNDERSCORE MINUS>;
@@ -224,6 +224,23 @@
                         sensor-bindings = <&rot_enc>;
                 };
 
+                        minecraft_layer {
+                        display-name = "MC";
+// |----------------------------------------------------//-------------------------------------------------| //
+// |    TAB    |   Q   |    W   |     E     |   R   |   //   |       |           |       |        |        | //
+// |    LSHT   |   A   |    S   |     D     |   F   |   //   |       |           |       |        |        | //
+// |    LCTL   |   Z   |    X   |     C     |   V   |   //   |       |           |       |        |        | //
+// |                   \        |           |       |   //   |       |    WASD   |       /                 | //
+// |====================================================//=================================================| //
+                        bindings = <
+    &lt NUMPAD Q &kp W          &kp F            &kp P            &kp B         &kp J          &kp L         &kp U            &kp Y          &trans             &trans
+    &kp A        &kp R          &kp S            &kp T            &kp G         &kp M          &kp N         &kp E            &kp I          &kp O              &trans
+    &kp Z        &kp X          &kp C            &kp D            &kp V         &kp K          &kp H         &kp COMMA        &kp DOT        &kp FSLH           &trans
+                                &kp BKSP         &kp SPACE        &lt SH TAB    &tog MINECRAFT &kp RSHIFT    &lt SPECIAL RET                                    &trans
+                        >;
+                        sensor-bindings = <&rot_enc>;
+                };
+
                 special_layer {
                         display-name = "SPECIAL";
 // |-------------------------------------------------------------//--------------------------------------------------------------------| //
@@ -339,23 +356,6 @@
     &kp O       &kp I     &kp E     &kp N      &kp M         &kp G    &kp T    &kp S       &kp R    &kp A       &trans
     &trans      &trans    &trans    &kp H      &kp K         &kp V    &kp D    &kp C       &kp X    &kp Z       &trans
                           &trans    &trans     &trans        &trans   &trans   &trans                           &trans
-                        >;
-                        sensor-bindings = <&rot_enc>;
-                };
-
-                minecraft_layer {
-                        display-name = "MC";
-// |----------------------------------------------------//-------------------------------------------------| //
-// |    TAB    |   Q   |    W   |     E     |   R   |   //   |       |           |       |        |        | //
-// |    LSHT   |   A   |    S   |     D     |   F   |   //   |       |           |       |        |        | //
-// |    LCTL   |   Z   |    X   |     C     |   V   |   //   |       |           |       |        |        | //
-// |                   \        |           |       |   //   |       |    WASD   |       /                 | //
-// |====================================================//=================================================| //
-                        bindings = <
-    &lt NUMPAD Q &kp W          &kp F            &kp P            &kp B         &kp J          &kp L         &kp U            &kp Y          &lt FUNCTION SQT   &trans
-    &kp A        &kp R          &kp S            &kp T            &kp G         &kp M          &kp N         &kp E            &kp I          &kp O              &trans
-    &kp Z        &kp X          &kp C            &kp D            &kp V         &kp K          &kp H         &kp COMMA        &kp DOT        &kp FSLH           &trans
-                                &kp BKSP         &kp SPACE        &lt SH TAB    &tog MINECRAFT &kp RSHIFT    &lt SPECIAL RET                                    &trans
                         >;
                         sensor-bindings = <&rot_enc>;
                 };
