@@ -224,7 +224,7 @@
                         sensor-bindings = <&rot_enc>;
                 };
 
-                        minecraft_layer {
+                minecraft_layer {
                         display-name = "MC";
 // |----------------------------------------------------//-------------------------------------------------| //
 // |    TAB    |   Q   |    W   |     E     |   R   |   //   |       |           |       |        |        | //
@@ -233,10 +233,10 @@
 // |                   \        |           |       |   //   |       |    WASD   |       /                 | //
 // |====================================================//=================================================| //
                         bindings = <
-    &lt NUMPAD Q &kp W          &kp F            &kp P            &kp B         &kp J          &kp L         &kp U            &kp Y          &trans             &trans
-    &kp A        &kp R          &kp S            &kp T            &kp G         &kp M          &kp N         &kp E            &kp I          &kp O              &trans
-    &kp Z        &kp X          &kp C            &kp D            &kp V         &kp K          &kp H         &kp COMMA        &kp DOT        &kp FSLH           &trans
-                                &kp BKSP         &kp SPACE        &lt SH TAB    &tog MINECRAFT &kp RSHIFT    &lt SPECIAL RET                                    &trans
+    &lt NUMPAD Q            &kp W          &kp F            &kp P            &kp B         &kp J          &kp L         &kp U            &kp Y          &trans             &trans
+    &lh_shft LSHFT A       &kp R          &kp S            &kp T            &kp G         &kp M          &kp N         &kp E            &kp I          &kp O              &trans
+    &lh_ctrl LCTRL Z        &kp X          &kp C            &kp D            &kp V         &kp K          &kp H         &kp COMMA        &kp DOT        &kp FSLH           &trans
+                                           &kp BKSP         &kp SPACE        &lt SH TAB    &tog MINECRAFT &kp RSHIFT    &lt SPECIAL RET                                    &trans
                         >;
                         sensor-bindings = <&rot_enc>;
                 };
